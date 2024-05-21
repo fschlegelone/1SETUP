@@ -1,0 +1,29 @@
+[user]
+  name = fschlegelone
+  email = fabian@schlegel.one
+[init]
+  defaultBranch = main
+[push]
+  default = simple
+  autoSetupRemote = true
+[credential]
+  helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+  useHttpPath = true
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+[git]
+	autoRefresh = true
+	autoFetch = true
+	refreshInterval = 10
+  fetchInterval = 60
+[core]
+#	pager = bat --style=plain
+  pager = nvimpager -p
+[merge]
+  conflictstyle = diff3
+[diff]
+  compactionHeuristic = true
+  colorMoved = default
+[color]
+	pager = no # disable pager colors to use nvim colors
