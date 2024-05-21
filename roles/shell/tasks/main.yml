@@ -1,0 +1,57 @@
+---
+# ZSH
+- name: "SHELL | zsh directory"
+  file:
+    mode: "0755"
+    path: "{{ ansible_user_dir }}/.config/zsh"
+    state: directory
+
+- name: "SHELL | Symlink zsh directory"
+  file:
+    src: "{{ role_path }}/files/zsh"
+    dest: "{{ ansible_user_dir }}/.config/zsh"
+    state: link
+    force: true
+
+- name: "SHELL | Symlink zshrc"
+  file:
+    src: "{{ role_path }}/files/zshrc"
+    dest: "{{ ansible_user_dir }}/.zshrc"
+    state: link
+    force: true
+
+- name: "SHELL | Symlink zshenv"
+  file:
+    src: "{{ role_path }}/files/zshenv"
+    dest: "{{ ansible_user_dir }}/.zshenv"
+    state: link
+    force: true
+
+- name: "SHELL | Symlink zprofile"
+  file:
+    src: "{{ role_path }}/files/zprofile"
+    dest: "{{ ansible_user_dir }}/.zprofile"
+    state: link
+    force: true
+
+# Bash
+- name: "SHELL | Symlink bash directory"
+  file:
+    src: "{{ role_path }}/files/bash"
+    dest: "{{ ansible_user_dir }}/.config/bash"
+    state: link
+    force: true
+
+- name: "SHELL | Symlink bashrc"
+  file:
+    src: "{{ role_path }}/files/bashrc"
+    dest: "{{ ansible_user_dir }}/.bashrc"
+    state: link
+    force: true
+
+- name: "SHELL | Symlink bash_profile"
+  file:
+    src: "{{ role_path }}/files/bash_profile"
+    dest: "{{ ansible_user_dir }}/.bash_profile"
+    state: link
+    force: true
