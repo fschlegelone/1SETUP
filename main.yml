@@ -2,11 +2,5 @@
 - name: Automated MacOS Setup
   hosts: osx
 
-  vars_files:
-    - vars.yml
-    - osx_vars.yml
-
-  pre_tasks:
-
-  tasks:
-  when: ansible_os_family == "Darwin"
+  roles:
+    - ssh

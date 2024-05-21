@@ -1,0 +1,19 @@
+Host * 
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519
+  User fschlegelone
+  IgnoreUnknown UseKeychain
+
+Host github.com
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519
+
+Host mac.schlegel.one
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519
+  User fschlegelone
+  
+Host cratosmac.schlegel.one
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519
+  User fschlegelone
