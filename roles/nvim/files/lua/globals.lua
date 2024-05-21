@@ -1,0 +1,29 @@
+keymap = vim.keymap.set
+nv_keymap = vim.api.nvim_set_keymap
+autocmd = vim.api.nvim_create_autocmd
+augroup = vim.api.nvim_create_augroup
+
+colors = {
+  -- accent colors
+  PINK = "#f5c2e7",
+  MAUVE = "#cba6f7",
+  RED = "#f38ba8",
+  MAROON = "#eba0ac",
+  PEACH = "#fab387",
+  YELLOW = "#f9e2af",
+  GREEN = "#a6e3a1",
+  TEAL = "#94e2d5",
+  BLUE = "#89b4fa",
+  LAVENDER = "#b4befe",
+  -- background colors
+  BG1 = "#1e1e2e",
+  BG2 = "#181825",
+  BG3 = "#11111b",
+  L_BG1 = "#313244",
+  L_BG2 = "#45475a",
+  L_BG3 = "#585b70",
+  FG1 = "#cdd6f4",
+  FG2 = "#a6adc8",
+  D_FG1 = "#11111b",
+  D_FG2 = "#1e1e2e",
+}
