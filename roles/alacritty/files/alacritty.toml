@@ -1,0 +1,28 @@
+import = [
+  "~/.config/alacritty/onetheme_alacritty.toml",
+  "~/.config/alacritty/styling.toml",
+]
+
+[env]
+TERM = "xterm-256color"
+[shell]
+program = "/opt/homebrew/bin/zsh"
+args = ["-l"]
+
+[window]
+padding.x = 10
+padding.y = 10
+decorations = "Buttonless"
+opacity = 0.8
+blur = true
+option_as_alt = "OnlyRight"
+startup_mode = "Windowed"
+
+title = "TERMINAL"
+
+[font]
+normal = { family = "IosevkaTerm Nerd Font Mono", style = "Bold" }
+size = 17
+
+[keyboard]
+bindings = []
