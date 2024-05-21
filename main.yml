@@ -4,3 +4,6 @@
 
   roles:
     - ssh
+    - shell
+    - nvim
+    - alacritty
