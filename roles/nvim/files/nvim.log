@@ -1,0 +1,10 @@
+ERR 2024-05-23T16:15:36.165 ?.20802    tui_mode_change:1298: uv_tty_set_mode failed: no such file or directory
+ERR 2024-05-23T16:15:37.314 ?.21514    tui_mode_change:1298: uv_tty_set_mode failed: no such file or directory
+ERR 2024-05-23T16:15:40.038 ?.23152    tui_mode_change:1298: uv_tty_set_mode failed: no such file or directory
+ERR 2024-05-23T16:15:41.014 ?.23706    tui_mode_change:1298: uv_tty_set_mode failed: no such file or directory
+ERR 2024-05-23T16:15:42.874 ?.25421    tui_mode_change:1298: uv_tty_set_mode failed: no such file or directory
+ERR 2024-05-23T16:16:38.728 ?.27422    terminfo_start:465: uv_pipe_open failed: inappropriate ioctl for device
+ERR 2024-05-23T16:16:38.728 ?.27422    flush_buf:2492: uv_write failed: bad file descriptor
+ERR 2024-05-23T16:16:38.728 ?.27422    tui_mode_change:1302: uv_tty_set_mode failed: bad file descriptor
+ERR 2024-05-23T16:16:38.728 ?.27422    flush_buf:2492: uv_write failed: bad file descriptor
+ERR 2024-05-23T16:16:53.805 ?.28363    tui_mode_change:1298: uv_tty_set_mode failed: no such file or directory
