@@ -3,6 +3,7 @@
   hosts: osx
 
   roles:
+    - settings
     - ssh
     - shell
     - nvim

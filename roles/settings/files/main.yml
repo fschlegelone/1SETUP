@@ -1,0 +1,9 @@
+---
+- name: "OSX Defaults | Dock Settings"
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide
+    value: true
+    state: present
+  tags:
+    - dock

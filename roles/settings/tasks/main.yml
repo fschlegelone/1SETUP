@@ -1,0 +1,7 @@
+- name: "Settings | Include macOS tasks"
+  include_tasks: osx.yml
+  when: ansible_os_family == "Darwin"
+
+- name: "Settings | Include Fedora tasks"
+  include_tasks: fedora.yml
+  when: ansible_os_family == "RedHat"
