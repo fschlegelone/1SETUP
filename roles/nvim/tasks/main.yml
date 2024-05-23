@@ -1,13 +1,7 @@
----
-- name: "NVIM | Directory"
-  file:
-    mode: "0755"
-    path: "{{ ansible_user_dir }}/.config/nvim"
-    state: directory
+- name: "Settings | Include macOS tasks"
+  include_tasks: osx.yml
+  when: ansible_os_family == "Darwin"
 
-- name: "NVIM | Symlink nvim directory"
-  file:
-    src: "{{ role_path }}/files"
-    dest: "{{ ansible_user_dir}}/.config/nvim"
-    state: link
-    force: true
+- name: "Settings | Include Fedora tasks"
+  include_tasks: fedora.yml
+  when: ansible_os_family == "RedHat"

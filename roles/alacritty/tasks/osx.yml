@@ -1,0 +1,13 @@
+---
+- name: "Alacritty | Directory"
+  file:
+    mode: "0755"
+    path: "{{ ansible_user_dir }}/.config/alacritty"
+    state: directory
+
+- name: "Alacritty | Symlink Configuration"
+  file:
+    src: "{{ role_path }}/files"
+    path: "{{ ansible_user_dir }}/.config/alacritty"
+    state: link
+    force: true

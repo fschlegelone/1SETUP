@@ -1,13 +1,7 @@
----
-- name: "Alacritty | Directory"
-  file:
-    mode: "0755"
-    path: "{{ ansible_user_dir }}/.config/alacritty"
-    state: directory
+- name: "Settings | Include macOS tasks"
+  include_tasks: osx.yml
+  when: ansible_os_family == "Darwin"
 
-- name: "Alacritty | Symlink Configuration"
-  file:
-    src: "{{ role_path }}/files"
-    path: "{{ ansible_user_dir }}/.config/alacritty"
-    state: link
-    force: true
+- name: "Settings | Include Fedora tasks"
+  include_tasks: fedora.yml
+  when: ansible_os_family == "RedHat"

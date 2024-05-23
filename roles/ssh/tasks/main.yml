@@ -1,41 +1,7 @@
----
-- name: "SSH | Copy Public Keys"
-  copy:
-    dest: "{{ ansible_user_dir }}/.ssh/{{ ssh_public_keys_item.key }}"
-    content: "{{ ssh_public_keys_item.value }}"
-    mode: "0644"
-  no_log: true
-  loop_control:
-    loop_var: ssh_public_keys_item
-  with_items: "{{ ssh_public_keys | default({}) | dict2items }}"
+- name: "Settings | Include macOS tasks"
+  include_tasks: osx.yml
+  when: ansible_os_family == "Darwin"
 
-- name: "SSH | Copy Private Keys"
-  copy:
-    dest: "{{ ansible_user_dir }}/.ssh/{{ ssh_private_keys_item.key }}"
-    content: "{{ ssh_private_keys_item.value }}"
-    mode: "0600"
-  no_log: true
-  loop_control:
-    loop_var: ssh_private_keys_item
-  with_items: "{{ ssh_private_keys | default({}) | dict2items }}"
-
-- name: "SSH | Copy config"
-  copy:
-    src: "config"
-    dest: "{{ ansible_user_dir }}/.ssh/config"
-    mode: "0644"
-  no_log: true
-
-- name: "SSH | Copy known_hosts"
-  copy:
-    src: "known_hosts"
-    dest: "{{ ansible_user_dir }}/.ssh/known_hosts"
-    mode: "0644"
-  no_log: true
-
-- name: "SSH | Copy authorized_keys"
-  copy:
-    src: "authorized_keys"
-    dest: "{{ ansible_user_dir }}/.ssh/authorized_keys"
-    mode: "0600"
-  no_log: true
+- name: "Settings | Include Fedora tasks"
+  include_tasks: fedora.yml
+  when: ansible_os_family == "RedHat"
